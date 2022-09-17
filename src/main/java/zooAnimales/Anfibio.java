@@ -38,7 +38,7 @@ public class Anfibio extends Animal {
         return colorPiel;
     }
     
-    public boolean getVenenoso(){
+    public boolean isVenenoso(){
         return venenoso;
     }
     

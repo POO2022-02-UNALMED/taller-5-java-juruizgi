@@ -16,7 +16,7 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private final Zona zona[] = new Zona[1];
+    private final ArrayList<Zona> zona = new ArrayList<>();
     
     public Animal(){totalAnimales++;}
     
@@ -49,11 +49,7 @@ public class Animal {
     }
     
     public Zona getZona(){
-        return zona[0];
-    }
-    
-    public void setZona(Zona zona){
-        this.zona[0] = zona;
+        return zona.get(0);
     }
     
     public String getNombre(){
@@ -88,10 +84,10 @@ public class Animal {
     @Override
     public String toString(){
         
-        if (this.zona[0]==null){
+        if (this.zona.get(0)==null){
             return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
         }else{
-            return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+this.zona[0].getNombre()+" en el "+this.zona[0].getZoo()[0].getNombre();
+            return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+this.zona.get(0).getNombre()+" en el "+this.zona.get(0).getZoo().getNombre();
             
         }
     }
