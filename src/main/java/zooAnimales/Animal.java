@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package zooAnimales;
-import gestion.Zona;
+import gestion.*;
 import java.util.ArrayList;
 /**
  *
@@ -16,15 +16,17 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private final ArrayList<Zona> zona = new ArrayList<>();
+    private ArrayList<Zona> zona = new ArrayList<>();
     
-    public Animal(){totalAnimales++;}
+    public Animal(){totalAnimales++
+                    zona.add(new Zona("default",new Zoologico()))";}
     
     public Animal(String nombre, int edad, String habitat, String genero){
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        zona.add(new Zona("default",new Zoologico()))
         totalAnimales++;
     }
     
