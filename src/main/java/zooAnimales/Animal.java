@@ -18,18 +18,27 @@ public class Animal {
     private String genero;
     private ArrayList<Zona> zona = new ArrayList<>();
     
+<<<<<<< HEAD
     public Animal(){
         totalAnimales++;
         zona.add(new Zona("defatult",new Zoologico()));
         
     }
+=======
+    public Animal(){totalAnimales++
+                    zona.add(new Zona("default",new Zoologico()))";}
+>>>>>>> f9331f496e2b0cfbc505fba94c604a6a4ffe5efb
     
     public Animal(String nombre, int edad, String habitat, String genero){
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+<<<<<<< HEAD
         zona.add(new Zona("default",new Zoologico()));
+=======
+        zona.add(new Zona("default",new Zoologico()))
+>>>>>>> f9331f496e2b0cfbc505fba94c604a6a4ffe5efb
         totalAnimales++;
     }
     
@@ -93,8 +102,20 @@ public class Animal {
     @Override
     public String toString(){
         
+<<<<<<< HEAD
         if (this.zona.get(0).getZoo().getNombre()!=null && this.zona.get(0).getNombre()!=null){
             return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.get(0).getNombre()+" en el "+zona.get(0).getZoo().getNombre();
+=======
+        if (this.zona.get(0)!=null){
+            if (zona.get(0).getZoo()==null){
+                return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+null+" en el "+null;
+
+            }else if(zona.get(0).getZoo().getNombre()==null){
+                return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.get(0).getNombre()+" en el "+null;
+            }else{
+                return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.get(0).getNombre()+" en el "+zona.get(0).getZoo().getNombre();
+            }
+>>>>>>> f9331f496e2b0cfbc505fba94c604a6a4ffe5efb
             
         }else{
             return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
