@@ -11,13 +11,14 @@ import java.util.ArrayList;
 public class Zoologico {
     private String nombre;
     private String ubicacion;
-    private final ArrayList<Zona> zonas = new ArrayList<>();
+    private ArrayList<Zona> zonas = new ArrayList<>();
     
     public Zoologico(){}
     
     public Zoologico(String nombre, String ubicacion){
         this.nombre = nombre;
         this.ubicacion = ubicacion;
+        
     }
     
     public void agregarZonas(Zona zona){
@@ -49,7 +50,7 @@ public class Zoologico {
         this.ubicacion = ubicacion;
     }
     
-    public ArrayList<Zona> getZonas(){
+    public ArrayList<Zona> getZona(){
         return zonas;
     }
 }

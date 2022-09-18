@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package zooAnimales;
-import gestion.Zona;
+import gestion.*;
 import java.util.ArrayList;
 /**
  *
@@ -16,15 +16,20 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private final ArrayList<Zona> zona = new ArrayList<>();
+    private ArrayList<Zona> zona = new ArrayList<>();
     
-    public Animal(){totalAnimales++;}
+    public Animal(){
+        totalAnimales++;
+        zona.add(new Zona("defatult",new Zoologico()));
+        
+    }
     
     public Animal(String nombre, int edad, String habitat, String genero){
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        zona.add(new Zona("default",new Zoologico()));
         totalAnimales++;
     }
     
@@ -50,6 +55,10 @@ public class Animal {
     
     public Zona getZona(){
         return zona.get(0);
+    }
+    
+    public void setZona(Zona zona){
+        this.zona.set(0,zona);
     }
     
     public String getNombre(){
@@ -84,11 +93,11 @@ public class Animal {
     @Override
     public String toString(){
         
-        if (this.zona.get(0)==null){
-            return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
-        }else{
-            return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+this.zona.get(0).getNombre()+" en el "+this.zona.get(0).getZoo().getNombre();
+        if (this.zona.get(0).getZoo().getNombre()!=null && this.zona.get(0).getNombre()!=null){
+            return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.get(0).getNombre()+" en el "+zona.get(0).getZoo().getNombre();
             
+        }else{
+            return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
         }
     }
     
