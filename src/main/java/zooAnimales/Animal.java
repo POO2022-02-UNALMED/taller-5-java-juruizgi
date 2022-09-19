@@ -16,10 +16,12 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private ArrayList<Zona> zona = new ArrayList<>();
+    private final ArrayList<Zona> zona = new ArrayList<>();
     
     public Animal(){
         totalAnimales++;
+        zona.add(new Zona(null,new Zoologico()));
+        
     }
     
     public Animal(String nombre, int edad, String habitat, String genero){
@@ -27,6 +29,7 @@ public class Animal {
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        zona.add(new Zona(null,new Zoologico()));
         totalAnimales++;
     }
     
@@ -90,7 +93,7 @@ public class Animal {
     @Override
     public String toString(){
         
-        if (this.zona.isEmpty() || this.getZona().getZoo() == null || this.getZona() == null){
+        if (this.zona.get(0).getZoo().getNombre()!=null && this.zona.get(0).getNombre()!=null){
             return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.get(0).getNombre()+" en el "+zona.get(0).getZoo().getNombre();
             
         }else{

@@ -1,7 +1,13 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package zooAnimales;
 import java.util.ArrayList;
-
+/**
+ *
+ * @author USUARIO
+ */
 public class Anfibio extends Animal {
     private static ArrayList<Anfibio> listado = new ArrayList<>();
     public static int ranas;

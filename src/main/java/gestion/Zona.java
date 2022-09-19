@@ -9,10 +9,12 @@ public class Zona {
     private final ArrayList<Animal> animales = new ArrayList<>();
 
     public Zona(){
+        zoo[0] = new Zoologico();
     }
     
     public Zona(String nombre, Zoologico zoo){
         this.nombre = nombre;
+        this.zoo = new Zoologico[1];
         this.zoo[0] = zoo;
     }
     
