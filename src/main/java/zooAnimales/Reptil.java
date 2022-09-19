@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *
  * @author USUARIO
  */
-public class Reptil extends Animal{
+class Reptil extends Animal{
 
     private static ArrayList<Reptil> listado = new ArrayList<>();
     public static int iguanas;
