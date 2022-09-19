@@ -90,7 +90,7 @@ public class Animal {
     @Override
     public String toString(){
         
-        if (this.zona.isEmpty() || this.getZona().getZoo() == null){
+        if (this.zona.isEmpty() || this.getZona().getZoo() == null || this.getZona() == null){
             return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona en la que me ubico es "+zona.get(0).getNombre()+" en el "+zona.get(0).getZoo().getNombre();
             
         }else{
