@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package zooAnimales;
 import java.util.ArrayList;
-/**
- *
- * @author USUARIO
- */
+
 public class Pez extends Animal {
     private static ArrayList<Pez> listado = new ArrayList<>();
     public static int salmones;
