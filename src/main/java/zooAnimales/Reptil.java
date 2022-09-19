@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package zooAnimales;
 import java.util.ArrayList;
-/**
- *
- * @author USUARIO
- */
+
 public class Reptil extends Animal{
 
     private static ArrayList<Reptil> listado = new ArrayList<>();
@@ -55,13 +48,7 @@ public class Reptil extends Animal{
         this.largoCola = largoCola;
     }
     
-    /*public static ArrayList<Reptil> getListado(){
-        return Reptil.listado;
-    }*/
-    
-    /*public static void setListado(ArrayList<Reptil> listado){
-        Reptil.listado = listado;
-    }*/
+
     
     @Override
     public String movimiento(){
