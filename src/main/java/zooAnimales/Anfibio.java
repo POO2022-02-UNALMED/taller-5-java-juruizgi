@@ -59,7 +59,7 @@ public class Anfibio extends Animal {
     }
     
     public static int cantidadAnfibios(){
-        return salamandras+ranas;
+        return listado.size();
     }
     
     public static ArrayList<Anfibio> getListado(){
