@@ -50,7 +50,7 @@ public class Animal {
     }
     
     public static int getTotalAnimales(){
-        return totalAnimales++;
+        return totalAnimales;
     }
     
     public Zona getZona(){
